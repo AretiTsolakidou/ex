@@ -1,7 +1,8 @@
 // Table.js
 import React from 'react';
 
-const Table = ({ timeseriesData }) => {
+const Table = ({ timeseriesData}) => {
+  
   // Make a table which contains the data from the timeseries.json file
   return (
     <div className='table-responsive w-75 container-fluid my-5' style={{ maxHeight: '500px', overflowY: 'auto' }}>
