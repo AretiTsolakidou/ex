@@ -19,15 +19,14 @@ const Table = ({ timeseriesData }) => {
           {timeseriesData.map((data) => {
             const dateTime = new Date(data.timestamp);
             const date = dateTime.toLocaleDateString();
-            const timeOptions = { hour: '2-digit', minute: '2-digit' };
-            const time = dateTime.toLocaleTimeString('el-GR', timeOptions);
-            const amPm = dateTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }).slice(-2);
+            const timeOptions = { hour: '2-digit', minute: '2-digit', hour12: true };
+            const time = dateTime.toLocaleTimeString('en-US', timeOptions);
 
             return (
-              // Place the data to the correct dolumn 
+              // Place the data to the correct column
               <tr key={data.timestamp} className='border border-light border-2'>
                 <td>{date}</td>
-                <td>{time} {amPm}</td>
+                <td>{time}</td>
                 <td>{data.DE_Price}€</td>
                 <td>{data.GR_Price}€</td>
                 <td>{data.FR_Price}€</td>

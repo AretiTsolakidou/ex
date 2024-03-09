@@ -1,6 +1,7 @@
 //ChartDE.js
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ChartDE = ({ timeseriesData }) => {
   const chartData = timeseriesData.map(entry => ({
